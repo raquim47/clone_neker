@@ -1,0 +1,166 @@
+// 메인
+.main {
+  position: relative;
+  margin-top: -20vw;
+  padding: 0 $medium;
+  z-index: $z1;
+
+  &__title {
+    position: relative;
+    width: 70%;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 80%;
+      white-space: nowrap;
+      font-size: 2.5vw;
+      color: #fff;
+      content: 'That\'s so you.';
+    }
+  }
+}
+
+// 컨탠트 (섹션 공통 스타일)
+.content {
+  position: relative;
+
+  &__text-area {
+    padding-bottom: $large;
+  }
+
+  &__title {
+    margin-left: auto;
+    width: 30%;
+    transform: translateY(30px);
+    transition: all .6s ease-in-out;
+    opacity: 0;
+  }
+
+  &__descript {
+    padding: $large*1.5 0 $large*1.8;
+  }
+
+  &__descript-item {
+    display: block;
+    line-height: 20px;
+    font-size: $ft-xs;
+    color: #fff;
+    transform: translateY(30px);
+    transition: all .6s linear;
+    opacity: 0;
+  }
+
+  &__descript-item:nth-child(2) {
+    transition-delay: .3s;
+  }
+}
+
+// 카드
+.card {
+  display: grid;
+  grid-auto-rows: 1fr;
+  
+  // 개별 아이템
+  &__item {
+    display: grid;
+    margin-bottom: $medium*2;
+  }
+
+  &__anchor {
+    padding: $medium*2;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  &__category {
+    font-size: $ft-s;
+  }
+
+  &__name,
+  &__detail,
+  &__price,
+  &__img-wrap {
+    display: block;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .6s ease-in-out;
+  }
+
+  &__name {
+    font-size: $ft-xl;
+    line-height: 26px;
+    padding: $small 0;
+  }
+
+  &__detail,
+  &__price,
+  &__img-wrap {
+    display: block;
+    font-size: $ft-xs;
+    transition-delay: .2s;
+  }
+
+  &__detail {
+    color: #707070;
+  }
+
+  &__price {
+    padding: $small 0 $medium*2;
+  }
+
+  &__img {
+    transition: all .2s ease-in-out;
+  }
+
+  &__anchor:hover &__img {
+    opacity: .7;
+  }
+}
+
+@media screen and (min-width:768px) {
+
+  // 메인
+  .main {
+    padding: 0 $large;
+    max-width: 1600px;
+    margin: -15vw auto 0;
+
+    &__title {
+      width: 55%;
+    }
+  }
+
+  // 컨탠츠
+  .content {
+    overflow: hidden;
+
+    &__descript-item {
+      font-size: $ft-m;
+      line-height: 160%;
+    }
+  }
+
+  // 카드
+  .card {
+    &__item {
+      width: 50%;
+      margin: 0;
+      padding: 10% 7%;
+    }
+
+    &__category {
+      font-size: $ft-m;
+    }
+
+    &__name {
+      font-size: 3vw;
+      line-height: 120%;
+    }
+
+    &__detail,
+    &__price {
+      font-size: $ft-s;
+    }
+  }
+}
