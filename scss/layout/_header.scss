@@ -1,0 +1,330 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: 0.5s linear;
+  z-index: $z2;
+  
+  // 로고
+  .logo {
+    padding: $large/2 $medium;
+    width: 120px;
+    z-index: $z3;
+  }
+  // 헤더 오른쪽 래퍼
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// 스토어 메뉴
+.store-menu {
+  position: relative;
+  padding: $small 0;
+  color: #fff;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+  &__list,
+  &__item {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s linear;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: $base;
+    border-radius: 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: $ft-xs;
+    
+    // 말풍선 꼬리
+    &::before {
+      position: absolute;
+      bottom: 100%;
+      left: 12px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #000;
+      border-top: 8px solid transparent;
+      border-radius: 2px;
+      content: '';
+    }
+  }
+
+  &__item {
+    padding: $micro 0;
+    transform: translateY(10px);
+    transition-delay: .3;
+    white-space: nowrap;
+
+    &:nth-child(2){
+      transition-delay: 0.45s;
+    }
+  }
+
+  &__title {
+    font-size: $ft-s;
+  }
+
+  &__icon {
+    transition: .3s ease-in-out;
+  }
+
+  &:hover &__list,
+  &:hover &__item {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover &__item {
+    transform: translateY(0);
+  }
+
+  &:hover &__icon{
+    transform: rotate(-180deg);
+  }
+}
+
+// 메인 메뉴 버튼(체크박스 버튼 동작)
+.site-nav-checkbox {
+  display: none;
+
+  // 햄버거바 애니메이션
+  &:checked ~ .site-nav-btn {
+    background-color: transparent;
+  }
+
+  &:checked ~ .site-nav-btn::before {
+    transform: translateY(-7px) rotate(45deg);
+  }
+  
+  &:checked ~ .site-nav-btn::after {
+    transform: translateY(7px) rotate(-45deg);
+  }
+  // 스토어 메뉴 동작(사라짐)
+  &:checked + .store-menu {
+    transform: translateY(-50px);
+  }
+
+  // 메인 메뉴 동작
+  &:checked ~ .site-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:checked ~ .site-nav .site-nav-menu__item {
+    animation: showUpText .5s .3s forwards;
+
+    &:nth-child(2){
+      animation: showUpText .5s .5s forwards;
+    }
+    &:nth-child(3){
+      animation: showUpText .5s .7s forwards;
+    }
+    &:nth-child(4){
+      animation: showUpText .5s .9s forwards;
+    }
+    &:nth-child(5){
+      animation: showUpText .5s 1.1s forwards;
+    }
+  }
+}
+
+// 메인 메뉴 버튼
+.site-nav-btn{
+  display: block;
+  position: relative;
+  margin: 0 $medium;
+  width: 25px;
+  height: 3px;
+  padding: 4px 0;
+  background-color: #fff;
+  background-clip:content-box;
+  box-sizing: content-box;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  z-index: $z3;
+  
+
+  &:hover::before {
+    transform: translateY(-3px);
+  }
+  
+  &:hover::after {
+    transform: translateY(3px);
+  }
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: .4s ease-in-out;
+  }
+  
+  &::before {
+    top: 100%;
+  }
+  
+  &::after {
+    bottom: 100%;
+  }
+}
+
+// 메인 메뉴
+
+.site-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px $medium 0; 
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s ease-in-out;
+  z-index: $z2;
+}
+.site-nav__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.site-nav-menu {
+  padding-bottom: $medium;
+
+  &__item {
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__title {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: $medium;
+  }
+  
+  &__link {
+    display: inline-block;
+    position: relative;
+    padding: $micro 0;
+    font-size: $ft-xxl;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+
+  &__link:hover::before {
+    width: 100%;
+    opacity: 1;
+  }
+  &__link::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(to right, #000, #eee);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    content: '';
+  }
+
+}
+
+.languege {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: $ft-xs;
+  font-weight: 600;
+
+  a {
+    margin-right: $base;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  a:first-child {
+    color: #fff;
+  }
+
+}
+
+@media screen and (min-width:768px) {
+  .header {
+    padding: $medium $medium*1.5;
+  }
+  .store-menu {
+    margin-right: $large;
+
+    &__title {
+      font-size: $ft-m;
+    }
+  }
+
+  .site-nav {
+    padding-top: 120px;
+    transform: translateY(-100px);
+    height: auto;
+    
+      &__inner {
+      width: 850px;
+      margin: 0 auto;  
+      flex-direction: row;
+      justify-content: center;
+      height: auto;
+    }
+    .site-nav-menu {
+      padding: 0 $large;
+      padding-bottom: $large*2;
+      &__link {
+        padding: $micro 0;
+      }
+    }
+    .languege {
+      padding: 0 $large;
+      align-items:flex-start;
+      font-size: $ft-m;
+    }
+  }
+
+  .site-nav-btn {
+    width: 40px;
+    padding: 8px 0;
+  }
+
+  #site-nav-toggle {
+    &:checked ~ .site-nav-btn::before {
+      transform: translateY(-11px) rotate(45deg);
+    }
+    
+    &:checked ~ .site-nav-btn::after {
+      transform: translateY(11px) rotate(-45deg);
+    }
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .header {
+    padding: $medium $large;
+    max-width: 1600px;
+    margin: auto;
+  }
+}
