@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/0d80c14f2f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- 전체 배경 비디오   -->
+  <div class="video">
+    <div class="video__dim"></div>
+    <video class="video__player" src="video/bg-neker.mp4" muted autoplay loop>
+      <strong>해당 영상의 경로가 올바르지 않습니다.</strong>
+    </video>
+  </div>
+  <!-- 헤더 -->
+  <header class="header">
+    <!-- <div class="header__inner"> -->
+    <!-- 로고 -->
+    <h1 class="logo">
+      <a href="#">
+        <img src="img/text-neker.svg" alt="네케르 로고">
+      </a>
+    </h1>
+    <!-- 메인 메뉴(+ 버튼) -->
+    <div class="header__right">
+      <input type="checkbox" id="btn-toggle" class="site-nav-checkbox">
+      <!-- 스토어 메뉴 -->
+      <div class="store-menu">
+        <strong class="store-menu__title">
+          Neker Store
+          <i class="fa-solid fa-circle-chevron-down store-menu__icon"></i>
+        </strong>
+        <div class="store-menu__list">
+          <a href="#" class="store-menu__item">
+            LU42 온라인 스토어
+          </a>
+          <a href="#" class="store-menu__item">
+            네이버 스마트스토어
+          </a>
+        </div>
+      </div>
+      <label for="btn-toggle" class="site-nav-btn"></label>
+      <nav class="site-nav">
+        <div class="site-nav__inner">
+          <div class="site-nav-menu">
+            <strong class="site-nav-menu__title">Products</strong>
+            <ul class="site-nav-menu__list">
+              <li class="site-nav-menu__item">
+                <a class="site-nav-menu__link" href="#">전체</a>
+              </li>
+              <li class="site-nav-menu__item">
+                <a class="site-nav-menu__link" href="#">베이스 메이크업</a>
+              </li>
+              <li class="site-nav-menu__item">
+                <a class="site-nav-menu__link" href="#">포인트 메이크업</a>
+              </li>
+              <li class="site-nav-menu__item">
+                <a class="site-nav-menu__link" href="#">유형별 메이크업</a>
+              </li>
+              <li class="site-nav-menu__item">
+                <a class="site-nav-menu__link" href="#">뷰티툴</a>
+              </li>
+            </ul>
+          </div>
+          <div class="site-nav-menu">
+            <strong class="site-nav-menu__title">About Us</strong>
+            <ul class="site-nav-menu__list">
+              <li class="site-nav-menu__item">
+                <a class="site-nav-menu__link" href="#">Brand Story</a>
+              </li>
+              <li class="site-nav-menu__item">
+                <a class="site-nav-menu__link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="languege">
+            <a href="#">KOR</a>
+            <a href="#">CHN</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- </div> -->
+  </header>
+  <!-- 메인 컨탠츠 -->
+  <main class="main">
+    <!-- 메인 타이틀 이미지 -->
+    <h2 class="main__title">
+      <img src="img/text-neker.svg" alt="네케르">
+    </h2>
+    <!-- 섹션01 best -->
+    <section class="best">
+      <div class="content">
+        <div class="content__text-area">
+          <div class="content__descript">
+            <small class="content__descript-item show-up">Recommend</small>
+            <small class="content__descript-item  show-up">Neker Best Products</small>
+          </div>
+          <img class="content__title show-up" src="img/title-best.svg" alt="타이틀 이미지">
+        </div>
+        <ul class="card">
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">Lip</small>
+              <h3 class="card__name show-up">
+                Veilayer<br>
+                Matte Lip
+              </h3>
+              <span class="card__detail show-up">No 09.Mauve Wave</span>
+              <span class="card__price show-up">₩19,000</span>
+              <div class="card__img-wrap show-up">
+                <img class="card__img" src="img/best01.png" alt="상품 이미지">
+              </div>
+            </a>
+          </li>
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">Face</small>
+              <h3 class="card__name show-up">
+                Veilayer<br>
+                Cheek
+              </h3>
+              <span class="card__detail show-up">No 02. Keira Pink</span>
+              <span class="card__price show-up">￦17,000</span>
+              <div class="card__img-wrap show-up">
+                <img class="card__img" src="img/best02.png" alt="상품 이미지">
+              </div>
+            </a>
+          </li>
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">Eye</small>
+              <h3 class="card__name show-up">
+                Veilayer<br>
+                Shadow Palette
+              </h3>
+              <span class="card__detail show-up">No 01. Mood Brown</span>
+              <span class="card__price show-up">￦22,000</span>
+              <div class="card__img-wrap show-up">
+                <img class="card__img" src="img/best03.png" alt="상품 이미지">
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 섹션02 face -->
+    <section class="face">
+      <div class="content">
+        <div class="content__text-area">
+          <div class="content__descript">
+            <small class="content__descript-item show-up">Show Your Spark</small>
+            <small class="content__descript-item show-up">With Neker Beauty</small>
+          </div>
+          <img class="content__title show-up" src="img/title-face.svg" alt="타이틀 이미지">
+        </div>
+        <ul class="card">
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">Face</small>
+              <h3 class="card__name show-up">
+                FX Cushion<br>
+                Foundation
+              </h3>
+              <span class="card__detail show-up">No 23. Natural Beige</span>
+              <span class="card__price show-up">￦38,000</span>
+              <div class="card__img-wrap show-up">
+                <img class="card__img" src="img/face01.png" alt="상품 이미지">
+              </div>
+            </a>
+          </li>
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">FX Beauty Balm</small>
+              <h3 class="card__name show-up">
+                여러번<br>
+                덧발라도<br>
+                자연스럽게<br>
+                밀착
+              </h3>
+              <span class="card__price show-up">￦21,000</span>
+              <img class="card__img img-into" src="img/face02.png" alt="상품 이미지">
+            </a>
+          </li>
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">FX Cushion Foundation</small>
+              <span class="card__detail show-up">
+                바르는 즉시 균일하게 밀착되어 결점을<br>
+                완벽하게 커버해주는 쿠션 파운데이션</span>
+              <span class="card__price show-up">￦38,000</span>
+              <h3 class="card__name show-up">
+                Perfection<br>
+                Coverage
+              </h3>
+            </a>
+          </li>
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <div class="card__gradient">
+                <img class="card__txt-img" src="img/face04.png" alt="텍스트 이미지">
+              </div>
+              <span class="card__detail show-up">
+                Show Your Spark<br>
+                With Neker Beauty</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 섹션03 story -->
+    <section class="story">
+      <div class="content">
+        <div class="story-title show-up">
+          <img class="story-title__that" src="img/story-that.svg" alt="타이틀 이미지">
+          <img class="story-title__so" src="img/story-so.svg" alt="타이틀 이미지">
+          <img class="story-title__you" src="img/story-you.svg" alt="타이틀 이미지">
+        </div>
+        <div class="content__descript">
+          <p class="content__descript-item show-up">
+            사회의 기준을 벗어나 고객 스스로가<br>
+            본연의 아름다움을 발견할 수 있도록<br>
+            장려하며, 열려있는 사고로 고객과<br>
+            소통하는 브랜드입니다
+          </p>
+        </div>
+        <ul class="card">
+          <li class="card__item">
+            <a class="card__anchor card-bg">
+            </a>
+          </li>
+          <li class="card__item">
+            <a class="card__anchor card-bg"></a>
+          </li>
+          <li class="card__item">
+            <a class="card__anchor card-bg"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 섹션04 skincare -->
+    <section class="skincare">
+      <div class="content">
+        <div class="content__text-area">
+          <div class="content__descript">
+            <small class="content__descript-item show-up">Neker Helps You</small>
+            <small class="content__descript-item show-up">To Pursue Your Own Beauty</small>
+          </div>
+          <img class="content__title show-up" src="img/title-skincare.svg" alt="타이틀 이미지">
+        </div>
+        <ul class="card">
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">Skincare</small>
+              <h3 class="card__name show-up">
+                Moistouch<br>
+                Ampoule
+              </h3>
+              <span class="card__price show-up">￦24,000</span>
+              <img class="card__img" src="img/skincare01.png" alt="상품 이미지">
+            </a>
+          </li>
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">FX Serum Mist</small>
+              <h3 class="card__name show-up">
+                빈틈없이<br>
+                촉촉하고<br>
+                고르게<br>
+                안개분사<br>
+              </h3>
+              <span class="card__price show-up">￦22,000</span>
+              <img class="card__img img-into" src="img/skincare02.png" alt="상품 이미지">
+            </a>
+          </li>
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <small class="card__category">Moistouch Cream</small>
+              <span class="card__detail show-up">
+                진짜 수분 올리고히알루론산이 함유되어<br>
+                피부 본연의 광채를 되찾아주는 수분 크림</span>
+              <span class="card__price show-up">￦28,000</span>
+              <h3 class="card__name show-up">
+                Real<br>
+                Moisturizing<br>
+                Cream
+              </h3>
+            </a>
+          </li>
+          <li class="card__item">
+            <a href="#" class="card__anchor">
+              <div class="card__gradient">
+                <img class="card__txt-img" src="img/skincare04.png" alt="상품 이미지">
+              </div>
+              <span class="card__detail show-up">
+                Neker Helps You<br>
+                To Pursue<br>
+                Your Own Beauty
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-info">
+      <p class="footer-info__item show-up">
+        주식회사 위더코어<br>
+        대표자 최홍준<br>
+        서울특별시 강남구 언주로 149길 17, 5층<br>
+        사업자등록번호 650-87-01751
+      </p>
+      <p class="footer-info__item show-up">
+        이메일 help@neker.co.kr<br>
+        Copyright ⓒ 2022. WETHECORE HOLDINGS CORP. All Rights Reserved.
+      </p>
+    </div>
+    <ul class="sns show-up">
+      <li class="sns__item"><a class="sns__link insta" href="https://www.instagram.com/neker.official/"></a></li>
+      <li class="sns__item"><a class="sns__link facebook" href="https://www.facebook.com/Neker/"></a></li>
+      <li class="sns__item"><a class="sns__link youtube"
+          href="https://www.youtube.com/channel/UCL3CSfxsqvcIhZxFU2Tw7Wg"></a></li>
+    </ul>
+  </footer>
+  <script src="js/smooth.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/scrollbar.js"></script>
+</body>
+
+</html>
