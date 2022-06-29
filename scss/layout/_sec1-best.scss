@@ -1,0 +1,34 @@
+@media screen and (min-width:768px) {
+  .best {
+    // 컨탠츠
+    .content {
+      &__descript {
+        margin-left: 15%;
+      }
+
+      &__title {
+        width: 25%;
+        margin-right: 10%;
+      }
+    }
+    // 컨탠츠 > 카드
+    .card {
+      &__item {
+        &:nth-child(1) {
+          margin-left: -7%;
+        }
+
+        &:nth-child(2) {
+          margin-left: auto;
+          margin-right: -7%;
+          transform: translateY(-50vw);
+        }
+
+        &:nth-child(3) {
+          margin-left: 12%;
+          transform: translateY(-110%);
+        }
+      }
+    }
+  }
+}
