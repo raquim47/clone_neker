@@ -1,0 +1,147 @@
+.face {
+  // 컨탠츠
+  .content {
+    &__descript {
+      text-align: end;
+    }
+
+    &__title {
+      margin-right: auto;
+      margin-left: 0;
+      padding-bottom: $large;
+    }
+  }
+  // 컨탠츠 > 카드
+  .card {
+    &__item:nth-child(2) {
+      color: #fff;
+
+      .card__name {
+        font-size: $ft-xxl;
+        line-height: 120%;
+      }
+
+      .card__anchor {
+        position: relative;
+        background: linear-gradient(180deg, #AC8D73 0%, #E8D8CB 100%);
+        overflow: hidden;
+      }
+
+      .card__img.img-into {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(20%, 20%);
+        transition: .3s linear;
+      }
+    }
+
+    &__item:nth-child(3) {
+      .card__anchor {
+        display: flex;
+        flex-direction: column;
+        background: url(../img/face03.jpg) center center;
+        background-size: cover;
+      }
+
+      .card__category {
+        font-weight: 600;
+      }
+
+      .card__detail {
+        padding: $medium 0;
+        font-size: $ft-m;
+        font-weight: 400;
+        line-height: 150%;
+        color: #000;
+      }
+
+      .card__name {
+        margin-top: auto;
+        font-size: 40px;
+        line-height: 100%;
+        color: #fff;
+      }
+    }
+
+    &__item:nth-child(4) {
+      .card__gradient {
+        position: relative;
+        width: 70%;
+      }
+
+      .card__gradient::before {
+        display: block;
+        position: absolute;
+        top: 1%;
+        width: 100%;
+        height: 98%;
+        background: linear-gradient(180deg, #eef0a3, #ddb9a2, #f18e5f, #a97650);
+        background-size: 300% 300%;
+        animation: fontAni 2.5s infinite linear;
+        content: '';
+        z-index: $z1;
+      }
+
+      .card__txt-img {
+        position: relative;
+        z-index: $z2;
+      }
+
+      .card__detail {
+        font-size: $ft-s;
+        color: #707070;
+        padding-top: $medium
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width:768px) {
+  .face {
+    margin-top: -60vw;
+    // 컨탠츠
+    .content {
+      &__descript {
+        margin-right: 15%;
+      }
+  
+      &__title {
+        margin-left: 10%;
+      }
+    }
+    // 컨탠츠 > 카드
+    .card {
+      &__item:nth-child(1) {
+        margin-left: auto;
+        margin-right: -7%;
+      }
+  
+      &__item:nth-child(2) {
+        margin-left: -7%;
+        margin-right: auto;
+        transform: translateY(-70%);
+      }
+  
+      &__item:nth-child(3) {
+        margin-left: auto;
+        margin-right: 5%;
+        transform: translateY(-110%);
+  
+        .card__detail {
+          font-size: 1.3vw;
+        }
+  
+        .card__name {
+          font-size: 3.5vw;
+          font-weight: 800;
+        }
+      }
+  
+      &__item:nth-child(4) {
+        transform: translateY(-180%);
+      }
+    }
+  }
+}
