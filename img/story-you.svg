@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 676 424" style="enable-background:new 0 0 676 424;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path id="thats-3_1_" class="st0" d="M411.3,255.1H389l-35.5,97H353l-35-97h-22.8l46.3,122.4c-7.9,21.6-14.2,27.4-30.2,27.4
+	c-3.4,0.1-6.8-0.4-10.1-1.4v17.8c3.6,0.9,7.3,1.3,11,1.2c26.2,0,38.2-8.6,50.2-39.8L411.3,255.1z M467.2,379.4
+	c36.2,0,62.9-33.1,62.9-64.1c0-37-25.2-60.7-59-60.7c-37,0-63.4,30.2-63.4,64.8C407.7,355.6,433.4,379.4,467.2,379.4z M471.3,376.8
+	c-27.8,0-43.7-31.9-43.7-61.4c0-35,12.5-58.3,40.6-58.3c26.4,0,42.5,32.2,42.5,62.2C510.6,354.7,496.7,376.8,471.3,376.8z
+	 M551.2,377.7c16.3-3.1,52.3-37.7,79.7-73c-10.1,17.3-25.7,42.5-24.7,52.3c0.5,4.8,3.1,14.4,9.1,19c0.7,0.5,4.6,1,7.9,1
+	c1.9,0.1,3.7-0.1,5.5-0.7c15.1-9.1,28.3-21.4,37.2-30l-1.4-1.7c-8.9,9.1-21.4,17.8-29,20.4c-4.8-1.4-9.8-5.5-9.6-9.6
+	c0.7-9.6,10.6-29.3,21.6-48.5c9.8-16.8,20.4-33.1,26.4-41.8c3.1-7.9-0.5-9.8-5.8-9.8c-3.6,0-7.9,1.2-11,2.2
+	c-4.3,6.7-11.3,21.8-19.9,34.1C609,331.4,574,365.5,562,365.5c-4.6-1.2-10.1-4.3-9.6-10.1c2.9-8.4,11-20.6,20.9-38.4
+	c8.2-14.6,18.7-32.9,18.5-39.4c-0.5-7-5.5-23-14.2-23.3c-1.5,0-3,0.4-4.3,1.2c-14.6,8.4-30,21.4-38.9,30l1.7,1.7
+	c9.4-10.1,21.4-17.8,28.1-19.4c5,1.4,7.7,5,7.9,8.9c0.5,8.9-7,21.8-15.4,37.2c-12.2,22.3-25.7,40.1-24.7,48
+	C534.6,372.7,546.4,377,551.2,377.7z"/>
+<script  type="text/javascript">//<![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// 
+	]]>
+</script>
+</svg>
