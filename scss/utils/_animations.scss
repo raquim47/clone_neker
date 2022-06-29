@@ -1,0 +1,22 @@
+@keyframes fontAni {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
+}
+
+@keyframes showUpText {
+  0%{
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+  
+// @include show-up(showUpText2, 0.45s);
+// @include show-up(showUpText3, 0.6s);
+// @include show-up(showUpText4, 0.75s);@include show-up(showUpText5, 0.9s);
