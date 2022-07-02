@@ -440,11 +440,11 @@
     width: 40px;
     padding: 8px 0;
   }
-  #site-nav-toggle:checked ~ .site-nav-btn::before {
+  .site-nav-checkbox:checked ~ .site-nav-btn::before {
     -webkit-transform: translateY(-11px) rotate(45deg);
             transform: translateY(-11px) rotate(45deg);
   }
-  #site-nav-toggle:checked ~ .site-nav-btn::after {
+  .site-nav-checkbox:checked ~ .site-nav-btn::after {
     -webkit-transform: translateY(11px) rotate(-45deg);
             transform: translateY(11px) rotate(-45deg);
   }
@@ -898,6 +898,9 @@ footer {
 @media screen and (min-width: 768px) {
   .story {
     margin-top: -100vw;
+  }
+  .story .content {
+    overflow: visible;
   }
   .story .content__descript {
     margin-left: 5%;
