@@ -1,9 +1,15 @@
-// nav 열렸을 때 body 스크롤바 제거
 const navBtnCheck = document.querySelector('.site-nav-checkbox');
+
 navBtnCheck.addEventListener('input', function () {
   if (navBtnCheck.checked === true) {
-    document.body.style.overflow = 'hidden'
+    document.body.style.cssText = `
+      position: fixed;
+      top: -${window.scrollY}px; 
+      overflow-y: scroll;
+      width: 100%;`;
   } else {
-    document.body.style.overflow = 'auto'
+    const scrollY = document.body.style.top;
+    document.body.style.cssText = '';
+    window.scrollTo(0, parseInt(scrollY || '0', 10) * -1)
   }
-})
+});
