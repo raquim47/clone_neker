@@ -1,3 +1,10 @@
+.move-up {
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
 @-webkit-keyframes fontAni {
   0% {
     background-position: 51% 0%;
@@ -830,7 +837,7 @@ footer {
   }
   .face .card__item:nth-child(3) {
     margin-left: auto;
-    margin-right: 5%;
+    margin-right: 2%;
     -webkit-transform: translateY(-110%);
             transform: translateY(-110%);
   }
