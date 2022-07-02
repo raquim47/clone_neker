@@ -1,21 +1,3 @@
-const showUpElem = document.querySelectorAll('.show-up');
-const mainTitle = document.querySelectorAll('.main__title')[0];
-const imgInto = document.querySelectorAll('.img-into');
-const storyBlock = document.querySelectorAll('.story')[0];
-const skincareBlock = document.querySelectorAll('.skincare')[0];
-const storyCardBg = document.querySelectorAll('.card-bg');
-
-const scrollTransitions = () => {
-  setOpacityTitle();
-  setTransitionImg(imgInto);
-  setOpacityDim();
-  setTextShow(showUpElem);
-  setHeaderShow();
-  setCardBgScale(storyCardBg);
-};
-
-window.addEventListener('scroll', scrollTransitions);
-
 // 좌표 백분율 구하기
 function getPercent(element) {
   const coordinate = element.getBoundingClientRect();
@@ -24,23 +6,25 @@ function getPercent(element) {
 
 // 메인 타이틀 투명도 변화
 const setOpacityTitle = () => {
-  const mainTitlePercentage = getPercent(mainTitle);
-  const opacityH = (mainTitlePercentage) * 10 / 4;
+  const mainTitle = document.querySelector('.main__title');
+  const mainTitlePercent = getPercent(mainTitle);
+  const opacityH = (mainTitlePercent) * 10 / 4;
 
-  if (mainTitlePercentage < 0.4 && mainTitlePercentage > 0) {
+  if (mainTitlePercent < 0.4 && mainTitlePercent > 0) {
     mainTitle.style.opacity = opacityH;
   }
 };
 
-
 // story 섹션 진입시 video dim 등장
 const setOpacityDim = () => {
   const storyDim = document.querySelector('.video__dim');
-  const footer = document.querySelector('footer')
+  const storyBlock = document.querySelector('.story');
+  const skincareBlock = document.querySelector('.skincare');
+  const footer = document.querySelector('footer');
+
   const storyBlockPercent = getPercent(storyBlock);
   const skincareBlockPercent = getPercent(skincareBlock);
   const footerPercent = getPercent(footer);
-  
 
   if (storyBlockPercent < 0.85) {
     storyDim.style.opacity = 0.8;
@@ -52,12 +36,14 @@ const setOpacityDim = () => {
     storyDim.style.opacity = 0;
   }
 
-  if(footerPercent < 0.9) {
+  if (footerPercent < 0.9) {
     storyDim.style.opacity = 0.8;
   }
 }
 
 // 카드 내부 움직이는 이미지 (스크롤 높이 따라서)
+const imgInto = document.querySelectorAll('.img-into');
+
 const setTransitionImg = (elements) => {
   elements.forEach((element) => {
     const imgIntoPercentage = getPercent(element);
@@ -70,6 +56,8 @@ const setTransitionImg = (elements) => {
 };
 
 // 스토리 섹션 카드 이미지 크기 조절
+const storyCardBg = document.querySelectorAll('.card-bg');
+
 const setCardBgScale = (elements) => {
   elements.forEach((element) => {
     const storyCardPercentage = getPercent(element);
@@ -81,6 +69,8 @@ const setCardBgScale = (elements) => {
 }
 
 // 카드 내부 텍스트 등장
+const showUpElem = document.querySelectorAll('.show-up');
+
 const setTextShow = (elements) => {
   elements.forEach((element) => {
     const precentageText = getPercent(element);
@@ -92,6 +82,16 @@ const setTextShow = (elements) => {
   });
 };
 
+const scrollTransitions = () => {
+  setOpacityTitle();
+  setTransitionImg(imgInto);
+  setOpacityDim();
+  setTextShow(showUpElem);
+  setHeaderShow();
+  setCardBgScale(storyCardBg);
+};
+
+window.addEventListener('scroll', scrollTransitions);
 
 // 헤더 보이기 숨기기
 let prevScrollTop = 0;
