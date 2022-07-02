@@ -82,12 +82,26 @@ const setTextShow = (elements) => {
   });
 };
 
+// 위로 움직이는 카드 아이템
+const moveUpElem = document.querySelectorAll('.move-up');
+
+const setTransitionCard = (elements) => {
+  elements.forEach((element) => {
+    const precentageCard = getPercent(element);
+
+    if (precentageCard < 0.95) {
+      element.style.transform = 'translateY(0)';
+    }
+  });
+};
+
 const scrollTransitions = () => {
   setOpacityTitle();
-  setTransitionImg(imgInto);
   setOpacityDim();
-  setTextShow(showUpElem);
   setHeaderShow();
+  setTransitionImg(imgInto);
+  setTransitionCard(moveUpElem);
+  setTextShow(showUpElem);
   setCardBgScale(storyCardBg);
 };
 

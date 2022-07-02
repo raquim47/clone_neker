@@ -21,3 +21,9 @@ $z1 : 1;
 $z2 : 10;
 $z3 : 100;
 $z4 : 1000;
+
+// add class
+.move-up {
+  transform: translateY(150px);
+  transition: 1s ease-in-out;
+}
